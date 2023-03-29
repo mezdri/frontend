@@ -1,0 +1,43 @@
+export const headers = [
+  {
+    headerName: 'Código Vehículo',
+    field: 'cod_vehiculo',
+    sortable: true,
+    resizable: true,
+    minWidth: 80,
+    lockPinned: true,
+  },
+  {
+    headerName: 'Patente',
+    field: 'patente_vehiculo',
+    sortable: true,
+    resizable: true,
+    minWidth: 80,
+    lockPinned: true,
+  },
+  {
+    headerName: 'Tipo de Vehículo',
+    field: '__desc_tipo_vehiculo',
+    sortable: true,
+    resizable: true,
+    minWidth: 80,
+    lockPinned: true,
+  },
+  {
+    headerName: 'Referencia',
+    field: '__refvehiculo',
+    sortable: true,
+    resizable: true,
+    minWidth: 80,
+    lockPinned: true,
+  },
+  {
+    headerName: 'Url',
+    field: 'uri',
+    sortable: true,
+    resizable: true,
+    minWidth: 80,
+    lockPinned: true,
+    hide: true,
+  },
+];
