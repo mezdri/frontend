@@ -3,7 +3,7 @@ name: 'Build and deploy to S3'
 on:
   pull_request:
     branches:
-      - master
+      - main
 #oidc encima de oauth 2.0
 permissions:
   id-token: write

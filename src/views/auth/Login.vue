@@ -37,7 +37,7 @@
               <v-card-text>
                 <div align="center">
                   <v-flex md12>
-                    <span style="font-size:25px">Ingresa con tu correo</span>
+                    <span style="font-size:25px">Ingresa con tu correo perra!</span>
                   </v-flex>
                 </div>
 
