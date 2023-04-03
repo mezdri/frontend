@@ -64,6 +64,7 @@ jobs:
           path: dist
 
   deploy:
+    if: ${{ github.event_name == 'push' }}
     runs-on: ubuntu-22.04
 
     steps:
@@ -74,7 +75,6 @@ jobs:
           path: dist
 
       - name: Configure AWS Credentials
-        if: ${{ github.event_name == 'push' }}
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-region: ${{ secrets.S3_BUCKET_REGION }}
@@ -82,9 +82,7 @@ jobs:
           role-session-name: GithubSession # OIDC
 
       - name: Check login
-        if: ${{ github.event_name == 'push' }}
         run: aws sts get-caller-identity
 
       - name: Upload to S3
-        if: ${{ github.event_name == 'push' }}
         run: aws s3 sync ./dist s3://${{ secrets.S3_BUCKET }} --delete
