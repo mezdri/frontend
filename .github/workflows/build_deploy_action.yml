@@ -22,24 +22,6 @@ jobs:
         with:
           access_token: ${{ github.token }}
 
-  #  lint:
-  #    runs-on: ubuntu-22.04
-  #    steps:
-  #      - uses: actions/checkout@v3
-  #        with:
-  #          fetch-depth: 0
-  #
-  #      - uses: actions/setup-node@v3
-  #        with:
-  #          node-version: 14
-  #          cache: 'npm'
-  #
-  #      - name: install
-  #        run: npm ci --no-audit --no-fund
-  #
-  #      - name: Lint
-  #        run: npm run eslint
-
   build:
     runs-on: ubuntu-22.04
     steps:
